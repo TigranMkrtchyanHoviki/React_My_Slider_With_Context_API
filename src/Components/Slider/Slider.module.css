@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.inner_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #000; */
+    /* margin-bottom: 20px; */
+}
+
+.div_img {
+    width: 700px;
+    height: 500px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.info_about_clicked_button {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    translate: 0% -50%;
+    z-index: 5;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff98;
+    animation: show_text 300ms linear 1;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes show_text {
+    from {
+        scale: 0
+    }
+
+    to {
+        scale: 1
+    }
+}
+
+.div_img > img {
+    object-fit: cover;
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: translate 300ms ease-in-out;
+}
+
+.div_buttons {
+    width: 100%;
+    height: 100%;
+    /* padding: 0px 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 23;
+}
+
+.arrow_left, 
+.arrow_right{
+    color: #ffffff;
+    font-size: 40px;
+    opacity: 0.5;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.div_buttons > div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms;
+}
+
+.div_buttons > div:hover {
+    background: #ebe5e55e;
+}
+
+.arrow_left:hover, 
+.arrow_right:hover {
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.click_arrow_animation {
+    animation: squish_arrow 200ms ease-in-out;
+}
+
+@keyframes squish {
+    100% {
+        scale: 1.4 0.6;
+    }
+}
+
+@keyframes squish_arrow {
+    50% {
+        scale: 1.4 0.6;
+    }
+}
+
+.div_Caorusel_button > button{
+    all: unset;
+    height: 30px;
+    margin-right: 10px;
+    background: #be87d49e;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.div_Caorusel_button > button:hover{
+    background: #9280e39e;
+    color: rgb(22, 52, 222);
+} 
+
+/* .div_buttons > button:first-child {
+    margin-right: 5px;
+    width: 50px;
+}
+
+.div_buttons > button:nth-child(2) {
+    margin-right: 5px;
+    width: 50px;
+}
+
+.div_buttons > button:last-child {
+    width: 70px;
+} */
+
+/* .automat_slid {
+    width: 100%;
+    height: 100%;
+    animation: auto_slid 5s linear infinite
+}
+
+@keyframes auto_slid {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translate(-100%);
+    }
+} */
